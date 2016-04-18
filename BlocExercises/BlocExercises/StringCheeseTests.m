@@ -32,8 +32,9 @@
 
 - (void)testThatCheeseFavoritingWorks {
     NSString *ricottaString = @"ricotta";
+ 
     NSString *favoriteCheese = [self.stringCheese favoriteCheeseStringWithCheese:ricottaString];
-    
+    NSLog(@"Favorite Cheese string = %@", self.stringCheese);
     XCTAssertEqualObjects(favoriteCheese, @"My favorite cheese is ricotta.", @"Incorrect favorite cheese string returned.");
 
     NSString *goatString = @"goat";
@@ -65,6 +66,8 @@
 
 - (void)testThatTurningNumbersIntoStringsWorks {
     NSString *numberOfCheesesString = [self.stringCheese numberOfCheesesStringWithCheeseCount:7];
+    NSLog(@"Number of Cheeses String returned = %@", numberOfCheesesString);
+    
     XCTAssertEqualObjects(numberOfCheesesString, @"7 cheeses", @"7 cheeses should be returned");
     numberOfCheesesString = [self.stringCheese numberOfCheesesStringWithCheeseCount:24];
     XCTAssertEqualObjects(numberOfCheesesString, @"24 cheeses", @"24 cheeses should be returned");
