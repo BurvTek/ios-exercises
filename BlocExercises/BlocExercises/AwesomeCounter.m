@@ -14,11 +14,18 @@
     /* WORK HERE */
     NSMutableString *longStringOfNumbers =[NSMutableString stringWithString:@""];
     
-    while (number<=otherNumber) {
+    if (number<=otherNumber) {
+        while (number<=otherNumber) {
         [longStringOfNumbers appendFormat:@"%ld", number];
         ++number;
         }
-    
+    }
+    else {
+        while (otherNumber<=number) {
+                [longStringOfNumbers appendFormat:@"%ld", otherNumber];
+                ++otherNumber;
+        }
+    }
     return longStringOfNumbers;
 }
 
