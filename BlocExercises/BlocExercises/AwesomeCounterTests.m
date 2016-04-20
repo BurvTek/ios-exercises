@@ -39,8 +39,8 @@
 }
 
 - (void)testThatStringWorksDescending {
-    NSInteger lowNumber = 9;
-    NSInteger highNumber = 4;
+    NSInteger lowNumber = 4;
+    NSInteger highNumber = 9;
     NSString *expectedString = @"456789";
     NSString *actualString = [self.counter stringWithNumbersBetweenNumber:lowNumber andOtherNumber:highNumber];
     XCTAssertEqualObjects(expectedString, actualString, @"strings differed");

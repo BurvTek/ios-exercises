@@ -12,7 +12,14 @@
 
 - (NSString *) stringWithNumbersBetweenNumber:(NSInteger)number andOtherNumber: (NSInteger)otherNumber {
     /* WORK HERE */
-    return @"";
+    NSMutableString *longStringOfNumbers =[NSMutableString stringWithString:@""];
+    
+    while (number<=otherNumber) {
+        [longStringOfNumbers appendFormat:@"%ld", number];
+        ++number;
+        }
+    
+    return longStringOfNumbers;
 }
 
 @end
