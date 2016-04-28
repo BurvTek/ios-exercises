@@ -30,14 +30,14 @@
 
 - (NSArray *) alphabeticallySortedStarTrekCharactersFromArray:(NSArray *)characterArray {
     /* WORK HERE */
-    NSMutableArray *myMutableTrekies = [NSMutableArray arrayWithCapacity:5];
-    for (NSInteger idx = 0; idx < characterArray.count; idx++) {
-        [myMutableTrekies addObject:characterArray[idx]];
-    }
+    // NSMutableArray *myMutableTrekies = [NSMutableArray arrayWithCapacity:5];
+    //for (NSInteger idx = 0; idx < characterArray.count; idx++) {
+     //   [myMutableTrekies addObject:characterArray[idx]];
+    //}
     
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:nil ascending:YES selector:@selector(localizedCaseInsensitiveCompare:)];
-    [myMutableTrekies sortUsingDescriptors:@[sortDescriptor]];
+    // NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:nil ascending:YES selector:@selector(localizedCaseInsensitiveCompare:)]
 
+    NSArray *myMutableTrekies = [characterArray sortedArrayUsingDescriptors:characterArray];
     return myMutableTrekies;
 }
 

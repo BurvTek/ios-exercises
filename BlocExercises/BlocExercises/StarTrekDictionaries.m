@@ -12,6 +12,15 @@
 
 - (NSString *)favoriteDrinkForStarTrekCharacterDictionary:(NSDictionary *)characterDictionary {
     /* WORK HERE */
+   
+    NSMutableDictionary *myChangingFavorites = [myFavorites mutableCopy];
+    NSLog(@"There are %@ X6's in stock", inventory[@"BMW X6"]);
+    NSLog(@"Worfs favorite drink is ",[myChangingFavorites[@"Worf"]);
+    
+    if (favoriteMovie != nil && [favoriteMovie isKindOfClass:[NSString class]]) {
+        NSLog(@"Favorite Movie: %@", favoriteMovie);
+    
+    
     return @"";
 }
 
