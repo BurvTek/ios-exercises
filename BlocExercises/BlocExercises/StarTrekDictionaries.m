@@ -33,8 +33,11 @@
     /* WORK HERE */
     // declare an NSMutableDictionary.  Convert characterDictionary coming in and make it mutable
     // assign string quote to mutable dictionary and then return the dictionary.
-    
-    return @{};
+ //   NSMutableDictionary *myMutableDict = [NSMutableDictionary dictionary];
+ //   [myMutableDict addEntriesFromDictionary: characterDictionary];
+    NSMutableDictionary *myMutableDict = [characterDictionary mutableCopy];
+    [myMutableDict  setObject:@("Engage") forKey:@"quote"];
+    return myMutableDict;
 }
 
 @end
