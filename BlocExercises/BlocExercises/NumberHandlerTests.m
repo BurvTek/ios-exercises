@@ -37,7 +37,7 @@
 
     expectedArray = @[@-4, @-3, @-2, @-1, @0];
     actualArray = [self.handler arrayOfNumbersBetweenNumber:-4 andOtherNumber:0];
-    XCTAssertEqualObjects(expectedArray, actualArray, @"Incorrect number array was returned.");    
+    XCTAssertEqualObjects(expectedArray, actualArray, @"Incorrect number array was returned.");
 }
 
 - (void) testThatLowestNumberIsReturned {
